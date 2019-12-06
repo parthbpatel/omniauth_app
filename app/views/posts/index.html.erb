@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
-
+<% if user_signed_in? %>
+<%= link_to 'logout', destroy_user_session_path, method: :delete %>
+<% end %>
 <table>
   <thead>
     <tr>
